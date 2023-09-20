@@ -4,7 +4,7 @@ module.exports = {
   init: (server) => {
     io = require("socket.io")(server, {
       cors: {
-        origin: "http://localhost:3000",
+        origin: "https://chatapp-fe-kappa.vercel.app",
         methods: ["GET", "POST"],
       },
     });

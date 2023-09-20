@@ -14,7 +14,7 @@ const Login = () => {
   const handleLogin = () => {
     let data = { email, pwd };
     axios
-      .post("api/v1/login", data)
+      .post("https://chatapp-ochre-tau.vercel.app/api/v1/login", data)
       .then((res) => {
         sessionStorage.setItem("chattyUserId", res.data.id);
         navigate("/");

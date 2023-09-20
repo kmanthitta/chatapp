@@ -25,7 +25,7 @@ const SearchSection = ({ resetSearch }) => {
   const handleStartChat = (id) => {
     axios
       .get(
-        `api/v1/find/chat?userId=${sessionStorage.getItem(
+        `https://chatapp-ochre-tau.vercel.app/api/v1/find/chat?userId=${sessionStorage.getItem(
           "chattyUserId"
         )}&withUserId=${id}`
       )
@@ -45,7 +45,7 @@ const SearchSection = ({ resetSearch }) => {
     } else {
       axios
         .get(
-          `api/v1/find/users?myId=${sessionStorage.getItem(
+          `https://chatapp-ochre-tau.vercel.app/api/v1/find/users?myId=${sessionStorage.getItem(
             "chattyUserId"
           )}&name=${searchQuery}`
         )

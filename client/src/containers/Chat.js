@@ -25,7 +25,7 @@ const Chat = () => {
   const handleSendMessage = () => {
     if (message.length > 0) {
       axios
-        .post("api/v1/chat/ping", {
+        .post("https://chatapp-ochre-tau.vercel.app/api/v1/chat/ping", {
           chatroomId: selectedChat._id,
           author: sessionStorage.getItem("chattyUserId"),
           message,

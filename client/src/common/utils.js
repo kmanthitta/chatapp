@@ -35,7 +35,7 @@ export const getActiveChatName = (chat) => {
 
 export const readChat = (chatId, count) => {
   axios.post(
-    `api/v1/chat/read?userId=${sessionStorage.getItem(
+    `https://chatapp-ochre-tau.vercel.app/api/v1/chat/read?userId=${sessionStorage.getItem(
       "chattyUserId"
     )}&chatroomId=${chatId}&count=${count}`
   );

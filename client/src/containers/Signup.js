@@ -18,7 +18,7 @@ const Signup = () => {
     if (validate()) {
       let data = { name, email, pwd };
       axios
-        .post("api/v1/register", data)
+        .post("https://chatapp-ochre-tau.vercel.app/api/v1/register", data)
         .then((res) => {
           sessionStorage.setItem("chattyUserId", res.data.id);
           navigate("/");

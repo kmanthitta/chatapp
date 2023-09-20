@@ -55,7 +55,7 @@ const CustomDialog = ({
       participants.push(sessionStorage.getItem("chattyUserId"));
 
       axios
-        .post("api/v1/find/groupChat", {
+        .post("https://chatapp-ochre-tau.vercel.app/api/v1/find/groupChat", {
           name,
           participants,
         })

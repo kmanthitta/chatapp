@@ -25,7 +25,7 @@ const Home = () => {
     } else {
       getChatList();
     }
-    socket.current = io("api/v1");
+    socket.current = io("https://chatapp-ochre-tau.vercel.app/api/v1");
   }, []);
 
   const getUnreadCount = (chat) => {
@@ -85,7 +85,7 @@ const Home = () => {
   const getChatList = () => {
     axios
       .get(
-        `api/v1/find/mychats?userId=${sessionStorage.getItem(
+        `https://chatapp-ochre-tau.vercel.app/api/v1/find/mychats?userId=${sessionStorage.getItem(
           "chattyUserId"
         )}`
       )
